@@ -10,13 +10,19 @@ public class Persona {
         Console.WriteLine("Dirección: {0}", Dirección);
     }
 
-    public void CalcularIMC(int peso, int altura) {
+    public void CalcularIMC() {
+        Console.WriteLine("Introduce el peso:");
+        int peso = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Introduce la altura:");
+        int altura = int.Parse(Console.ReadLine());
+
         if (altura != 0)
         {
             float imc = peso / (altura * altura);
             Console.WriteLine("IMC: {0}", imc);
         }
-        else 
+        else
         {
             Console.WriteLine("La altura no puede ser 0");
         }
@@ -31,4 +37,4 @@ public class Persona {
         Console.WriteLine("Introduce tu dirección:");
         Dirección = Console.ReadLine();
     }
-}  
+}
